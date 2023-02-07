@@ -1,0 +1,88 @@
+name: country_code_picker_mp
+description: A flutter package for showing a country code selector. In addition it gives the possibility to select a list of favorites countries, as well as to search using a simple searchbox  
+version: 1.0.3
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+#  modal_bottom_sheet: ^2.1.2
+  collection: ^1.17.0
+  universal_platform: ^1.0.0+1
+
+flutter:
+  assets:
+    - flags/
+    - locales/i18n/af.json
+    - locales/i18n/am.json
+    - locales/i18n/ha.json
+    - locales/i18n/ku.json
+    - locales/i18n/ml.json
+    - locales/i18n/no.json
+    - locales/i18n/ps.json
+    - locales/i18n/sd.json
+    - locales/i18n/so.json
+    - locales/i18n/sq.json
+    - locales/i18n/ta.json
+    - locales/i18n/tg.json
+    - locales/i18n/tt.json
+    - locales/i18n/ug.json
+    - locales/i18n/ur.json
+    - locales/i18n/vi.json
+    - locales/i18n/ar.json
+    - locales/i18n/az.json
+    - locales/i18n/be.json
+    - locales/i18n/bg.json
+    - locales/i18n/bn.json
+    - locales/i18n/bs.json
+    - locales/i18n/ca.json
+    - locales/i18n/cs.json
+    - locales/i18n/da.json
+    - locales/i18n/de.json
+    - locales/i18n/el.json
+    - locales/i18n/en.json
+    - locales/i18n/es.json
+    - locales/i18n/et.json
+    - locales/i18n/fa.json
+    - locales/i18n/fi.json
+    - locales/i18n/fr.json
+    - locales/i18n/gl.json
+    - locales/i18n/el.json
+    - locales/i18n/he.json
+    - locales/i18n/hi.json
+    - locales/i18n/hr.json
+    - locales/i18n/hu.json
+    - locales/i18n/hy.json
+    - locales/i18n/id.json
+    - locales/i18n/is.json
+    - locales/i18n/it.json
+    - locales/i18n/ja.json
+    - locales/i18n/ka.json
+    - locales/i18n/kk.json
+    - locales/i18n/km.json
+    - locales/i18n/ko.json
+    - locales/i18n/ky.json
+    - locales/i18n/lt.json
+    - locales/i18n/lv.json
+    - locales/i18n/mk.json
+    - locales/i18n/mn.json
+    - locales/i18n/ms.json
+    - locales/i18n/nb.json
+    - locales/i18n/nl.json
+    - locales/i18n/nn.json
+    - locales/i18n/pl.json
+    - locales/i18n/pt.json
+    - locales/i18n/ro.json
+    - locales/i18n/ru.json
+    - locales/i18n/sk.json
+    - locales/i18n/sl.json
+    - locales/i18n/sr.json
+    - locales/i18n/sv.json
+    - locales/i18n/th.json
+    - locales/i18n/tr.json
+    - locales/i18n/uk.json
+    - locales/i18n/uz.json
+    - locales/i18n/zh.json
