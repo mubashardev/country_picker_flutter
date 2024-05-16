@@ -1,8 +1,7 @@
-library country_code_picker;
+library country_code_picker_mp;
 
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:country_code_picker_mp/selection_dialog.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:universal_platform/universal_platform.dart';
 
@@ -199,8 +198,8 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                     widget.showOnlyCountryWhenClosed
                         ? selectedItem!.toCountryStringOnly()
                         : selectedItem.toString(),
-                    style:
-                        widget.textStyle ?? Theme.of(context).textTheme.button,
+                    style: widget.textStyle ??
+                        Theme.of(context).textTheme.bodyMedium,
                     overflow: widget.textOverflow,
                   ),
                 ),
