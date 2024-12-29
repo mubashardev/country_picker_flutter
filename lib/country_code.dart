@@ -5,8 +5,8 @@ import 'country_localizations.dart';
 
 mixin ToAlias {}
 
-@deprecated
-class CElement = CountryCode with ToAlias;
+// @deprecated
+// class CElement = CountryCode with ToAlias;
 
 /// Country element. This is the element that contains all the information
 class CountryCode {
@@ -29,10 +29,10 @@ class CountryCode {
     this.dialCode,
   });
 
-  @Deprecated('Use `fromCountryCode` instead.')
-  factory CountryCode.fromCode(String isoCode) {
-    return CountryCode.fromCountryCode(isoCode);
-  }
+  // @Deprecated('Use `fromCountryCode` instead.')
+  // factory CountryCode.fromCode(String isoCode) {
+  //   return CountryCode.fromCountryCode(isoCode);
+  // }
 
   factory CountryCode.fromCountryCode(String countryCode) {
     final Map<String, String>? jsonCode = codes.firstWhereOrNull(
