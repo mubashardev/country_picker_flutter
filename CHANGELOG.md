@@ -13,3 +13,7 @@
 ## 1.0.6
 
 - Added `searchBuilder` property to enable custom search widget with filteration logic as a function parameter `Function(String) onChange`. Just assign `onChange` to the property of your `TextField` or `TextFormField`.
+
+## 1.0.7
+
+- Updated dependencies, removed unnecessary `universal_platform` dependency.
