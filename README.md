@@ -168,4 +168,4 @@ Here is a list of properties available to customize your widget:
 
 ## Contributions
 
-Contributions of any kind are more than welcome! Feel free to fork and improve country_code_picker in any way you want, make a pull request, or open an issue.
+Contributions of any kind are more than welcome! Feel free to fork and improve country_picker_flutter in any way you want, make a [Pull request](https://github.com/mubashardev/country_picker_flutter/fork), or [Open an issue](https://github.com/mubashardev/country_picker_flutter/issues/new).
