@@ -1,9 +1,9 @@
-library country_code_picker_mp;
+library country_picker_flutter;
 
 import 'dart:io';
 
 import 'package:collection/collection.dart' show IterableExtension;
-import 'package:country_code_picker_mp/selection_dialog.dart';
+import 'package:country_picker_flutter/selection_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'country_code.dart';

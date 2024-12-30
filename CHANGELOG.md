@@ -18,5 +18,5 @@
 
 - Updated dependencies, removed unnecessary `universal_platform` dependency.
 
-## 1.0.8
+## 1.0.9
 - Update image URLs in README.md for proper rendering

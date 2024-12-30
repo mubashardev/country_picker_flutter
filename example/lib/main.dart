@@ -1,4 +1,4 @@
-import 'package:country_code_picker_mp/country_code_picker.dart';
+import 'package:country_picker_flutter/country_code_picker.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
