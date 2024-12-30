@@ -1,30 +1,32 @@
 [![Pub](https://img.shields.io/pub/v/country_code_picker_mp.svg)](https://pub.dartlang.org/packages/country_code_picker_mp)
 
-# country_code_picker
+# country_code_picker_mp
 
 A flutter package for showing a country code selector.
 
 It supports i18n for 70 languages.
 
-Check the example on web! https://imtoori.dev/CountryCodePicker/#/
 
-<img src="https://raw.githubusercontent.com/Salvatore-Giordano/CountryCodePicker/master/screenshots/screen1.png" width="240"/>
-<img src="https://raw.githubusercontent.com/Salvatore-Giordano/CountryCodePicker/master/screenshots/screen2.png" width="240"/>
+<img src="https://raw.githubusercontent.com/mubashardev/country_code_picker_mp/main/screenshots/screen1.png" width="240"/>
+<img src="https://raw.githubusercontent.com/mubashardev/country_code_picker_mp/main/screenshots/screen2.png" width="240"/>
 
 ## Usage
 
 Just put the component in your application setting the onChanged callback.
 
 ```dart
+import 'package:country_code_picker_mp/country_code_picker_mp.dart';
+import 'package:flutter/material.dart';
+import 'dart:developer';
 
 @override
  Widget build(BuildContext context) => new Scaffold(
      body: Center(
        child: CountryCodePicker(
          onChanged: print,
-         // Initial selection and favorite can be one of code ('IT') OR dial_code('+39')
+         // Initial selection and favorite can be one of code ('PK') OR dial_code('+92')
          initialSelection: 'IT',
-         favorite: ['+39','FR'],
+         favorite: ['+92','PK'],
          // optional. Shows only country name and flag
          showCountryOnly: false,
          // optional. Shows only country name and flag when popup is closed.
@@ -43,7 +45,7 @@ Example:
 
 void _onCountryChange(CountryCode countryCode) {
     //TODO : manipulate the selected country code here
-    print("New Country selected: " + countryCode.toString());
+    log("New Country selected: " + countryCode.toString());
   }
 
 ```
@@ -55,7 +57,7 @@ Just add the `CountryLocalizations.delegate` in the list of your app delegates
 ```dart
  return new MaterialApp(
       supportedLocales: [
-         Locale("af"),
+        Locale("af"),
         Locale("am"),
         Locale("ar"),
         Locale("az"),

@@ -339,6 +339,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
             showCountryOnly: widget.showCountryOnly,
             emptySearchBuilder: widget.emptySearchBuilder,
             searchDecoration: widget.searchDecoration,
+            searchBuilder: widget.searchBuilder,
             searchStyle: widget.searchStyle,
             textStyle: widget.dialogTextStyle,
             boxDecoration: widget.boxDecoration,

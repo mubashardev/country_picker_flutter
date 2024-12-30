@@ -17,8 +17,10 @@ class SelectionDialog extends StatefulWidget {
   final Size? size;
   final bool hideSearch;
   final Icon? closeIcon;
+
   /// While using searchBuilder, hideSearch should be set to `false`. You will get a `BuildContext context` instance, `Function(String) onChange` function as callback arguments. Make to assign the `onChange` function to the `onChanged` property of the `TextField` widget. This will enable the filteration logic.
-  final Widget Function(BuildContext context, Function(String) onChange)? searchBuilder;
+  final Widget Function(BuildContext context, Function(String) onChange)?
+      searchBuilder;
 
   /// Background color of SelectionDialog
   final Color? backgroundColor;
@@ -97,11 +99,12 @@ class _SelectionDialogState extends State<SelectionDialog> {
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 24, vertical: 5),
-                  child: widget.searchBuilder?.call(context, _filterElements) ?? TextField(
-                    style: widget.searchStyle,
-                    decoration: widget.searchDecoration,
-                    onChanged: _filterElements,
-                  ),
+                  child: widget.searchBuilder?.call(context, _filterElements) ??
+                      TextField(
+                        style: widget.searchStyle,
+                        decoration: widget.searchDecoration,
+                        onChanged: _filterElements,
+                      ),
                 ),
                 SizedBox(
                   height: 5,
