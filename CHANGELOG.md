@@ -17,3 +17,6 @@
 ## 1.0.7
 
 - Updated dependencies, removed unnecessary `universal_platform` dependency.
+
+## 1.0.8
+- Update image URLs in README.md for proper rendering
