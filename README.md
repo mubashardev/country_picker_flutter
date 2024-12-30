@@ -7,15 +7,15 @@ A flutter package for showing a country code selector.
 It supports i18n for 70 languages.
 
 
-<img src="https://raw.githubusercontent.com/mubashardev/country_code_picker_mp/main/screenshots/screen1.png" width="240"/>
-<img src="https://raw.githubusercontent.com/mubashardev/country_code_picker_mp/main/screenshots/screen2.png" width="240"/>
+<img src="https://raw.githubusercontent.com/mubashardev/country_picker_flutter/main/screenshots/screen1.png" width="240"/>
+<img src="https://raw.githubusercontent.com/mubashardev/country_picker_flutter/main/screenshots/screen2.png" width="240"/>
 
 ## Usage
 
 Just put the component in your application setting the onChanged callback.
 
 ```dart
-import 'package:country_code_picker_mp/country_code_picker_mp.dart';
+import 'package:country_picker_flutter/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer';
 

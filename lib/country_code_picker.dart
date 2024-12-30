@@ -1,9 +1,10 @@
 library country_code_picker_mp;
 
+import 'dart:io';
+
 import 'package:collection/collection.dart' show IterableExtension;
 import 'package:country_code_picker_mp/selection_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:universal_platform/universal_platform.dart';
 
 import 'country_code.dart';
 import 'country_codes.dart';
@@ -84,7 +85,8 @@ class CountryCodePicker extends StatefulWidget {
   final List<Map<String, String>> countryList;
 
   /// While using searchBuilder, hideSearch should be set to `false`. You will get a `BuildContext context` instance, `Function(String) onChange` function as callback arguments. Make to assign the `onChange` function to the `onChanged` property of the [TextField] or [TextFormField] widget. This will enable the filteration logic.
-  final Widget Function(BuildContext context, Function(String) onChange)? searchBuilder;
+  final Widget Function(BuildContext context, Function(String) onChange)?
+      searchBuilder;
 
   CountryCodePicker({
     this.onChanged,
@@ -285,7 +287,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
   }
 
   void showCountryCodePickerDialog() {
-    if (!UniversalPlatform.isAndroid && !UniversalPlatform.isIOS) {
+    if (!Platform.isAndroid && !Platform.isIOS) {
       showDialog(
         barrierColor: widget.barrierColor ?? Colors.grey.withValues(alpha: 0.5),
         // backgroundColor: widget.backgroundColor ?? Colors.transparent,
