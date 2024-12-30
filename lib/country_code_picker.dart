@@ -83,6 +83,9 @@ class CountryCodePicker extends StatefulWidget {
   /// with customized codes.
   final List<Map<String, String>> countryList;
 
+  /// While using searchBuilder, hideSearch should be set to `false`. You will get a `BuildContext context` instance, `Function(String) onChange` function as callback arguments. Make to assign the `onChange` function to the `onChanged` property of the `TextField` widget. This will enable the filteration logic.
+  final Widget Function(BuildContext context, Function(String) onChange)? searchBuilder;
+
   CountryCodePicker({
     this.onChanged,
     this.onInit,
@@ -114,6 +117,7 @@ class CountryCodePicker extends StatefulWidget {
     this.hideSearch = false,
     this.showDropDownButton = false,
     this.dialogSize,
+    this.searchBuilder,
     this.dialogBackgroundColor,
     this.closeIcon = const Icon(Icons.close),
     this.countryList = codes,
@@ -283,7 +287,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
   void showCountryCodePickerDialog() {
     if (!UniversalPlatform.isAndroid && !UniversalPlatform.isIOS) {
       showDialog(
-        barrierColor: widget.barrierColor ?? Colors.grey.withOpacity(0.5),
+        barrierColor: widget.barrierColor ?? Colors.grey.withValues(alpha: 0.5),
         // backgroundColor: widget.backgroundColor ?? Colors.transparent,
         context: context,
         builder: (context) => Center(
@@ -293,6 +297,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
               child: SelectionDialog(
                 elements,
                 favoriteElements,
+                searchBuilder: widget.searchBuilder,
                 showCountryOnly: widget.showCountryOnly,
                 emptySearchBuilder: widget.emptySearchBuilder,
                 searchDecoration: widget.searchDecoration,
@@ -324,7 +329,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
       });
     } else {
       showModalBottomSheet(
-        barrierColor: widget.barrierColor ?? Colors.grey.withOpacity(0.5),
+        barrierColor: widget.barrierColor ?? Colors.grey.withValues(alpha: 0.5),
         backgroundColor: widget.backgroundColor ?? Colors.transparent,
         context: context,
         builder: (context) => Center(

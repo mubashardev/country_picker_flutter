@@ -17,6 +17,8 @@ class SelectionDialog extends StatefulWidget {
   final Size? size;
   final bool hideSearch;
   final Icon? closeIcon;
+  /// While using searchBuilder, hideSearch should be set to `false`. You will get a `BuildContext context` instance, `Function(String) onChange` function as callback arguments. Make to assign the `onChange` function to the `onChanged` property of the `TextField` widget. This will enable the filteration logic.
+  final Widget Function(BuildContext context, Function(String) onChange)? searchBuilder;
 
   /// Background color of SelectionDialog
   final Color? backgroundColor;
@@ -44,6 +46,7 @@ class SelectionDialog extends StatefulWidget {
     this.backgroundColor,
     this.barrierColor,
     this.hideSearch = false,
+    this.searchBuilder,
     this.closeIcon,
   })  : this.searchDecoration = searchDecoration.prefixIcon == null
             ? searchDecoration.copyWith(prefixIcon: Icon(Icons.search))
@@ -72,7 +75,8 @@ class _SelectionDialogState extends State<SelectionDialog> {
                 borderRadius: BorderRadius.all(Radius.circular(8.0)),
                 boxShadow: [
                   BoxShadow(
-                    color: widget.barrierColor ?? Colors.grey.withOpacity(1),
+                    color:
+                        widget.barrierColor ?? Colors.grey.withValues(alpha: 1),
                     spreadRadius: 5,
                     blurRadius: 7,
                     offset: Offset(0, 3), // changes position of shadow
@@ -89,15 +93,20 @@ class _SelectionDialogState extends State<SelectionDialog> {
                 icon: widget.closeIcon!,
                 onPressed: () => Navigator.pop(context),
               ),
-              if (!widget.hideSearch)
+              if (!widget.hideSearch) ...[
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
-                  child: TextField(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 5),
+                  child: widget.searchBuilder?.call(context, _filterElements) ?? TextField(
                     style: widget.searchStyle,
                     decoration: widget.searchDecoration,
                     onChanged: _filterElements,
                   ),
                 ),
+                SizedBox(
+                  height: 5,
+                )
+              ],
               Expanded(
                 child: ListView(
                   children: [
@@ -185,6 +194,9 @@ class _SelectionDialogState extends State<SelectionDialog> {
   @override
   void initState() {
     filteredElements = widget.elements;
+    if (widget.searchBuilder != null && widget.hideSearch) {
+      throw Exception('searchBuilder and hideSearch cannot be used together');
+    }
     super.initState();
   }
 
