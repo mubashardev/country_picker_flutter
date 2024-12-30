@@ -83,7 +83,7 @@ class CountryCodePicker extends StatefulWidget {
   /// with customized codes.
   final List<Map<String, String>> countryList;
 
-  /// While using searchBuilder, hideSearch should be set to `false`. You will get a `BuildContext context` instance, `Function(String) onChange` function as callback arguments. Make to assign the `onChange` function to the `onChanged` property of the `TextField` widget. This will enable the filteration logic.
+  /// While using searchBuilder, hideSearch should be set to `false`. You will get a `BuildContext context` instance, `Function(String) onChange` function as callback arguments. Make to assign the `onChange` function to the `onChanged` property of the [TextField] or [TextFormField] widget. This will enable the filteration logic.
   final Widget Function(BuildContext context, Function(String) onChange)? searchBuilder;
 
   CountryCodePicker({

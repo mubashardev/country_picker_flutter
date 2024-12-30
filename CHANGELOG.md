@@ -9,3 +9,7 @@
 
 - Removed deprecated `CountryCodePicker.countryList`
 - Upgraded Dart SDK to 3.4.0
+
+## 1.0.6
+
+- Added `searchBuilder` property to enable custom search widget with filteration logic as a function parameter `Function(String) onChange`. Just assign `onChange` to the property of your `TextField` or `TextFormField`.
