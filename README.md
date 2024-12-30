@@ -7,8 +7,8 @@ A flutter package for showing a country code selector.
 It supports i18n for 70 languages.
 
 
-<img src="https://raw.githubusercontent.com/mubashardev/country_picker_flutter/main/screenshots/screen1.png" width="240"/>
-<img src="https://raw.githubusercontent.com/mubashardev/country_picker_flutter/main/screenshots/screen2.png" width="240"/>
+<img src="https://github.com/mubashardev/country_picker_flutter/blob/main/screenshots/screen1.png?raw=true" width="240"/>
+<img src="https://github.com/mubashardev/country_picker_flutter/blob/main/screenshots/screen2.png?raw=true" width="240"/>
 
 ## Usage
 
