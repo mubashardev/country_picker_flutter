@@ -192,7 +192,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                         : const EdgeInsets.only(right: 16.0),
                     child: Image.asset(
                       selectedItem!.flagUri!,
-                      package: 'country_code_picker_mp',
+                      package: 'country_picker_flutter',
                       width: widget.flagWidth,
                     ),
                   ),

@@ -163,7 +163,7 @@ class _SelectionDialogState extends State<SelectionDialog> {
                     widget.flagDecoration == null ? Clip.none : Clip.hardEdge,
                 child: Image.asset(
                   e.flagUri!,
-                  package: 'country_code_picker_mp',
+                  package: 'country_picker_flutter',
                   width: widget.flagWidth,
                 ),
               ),

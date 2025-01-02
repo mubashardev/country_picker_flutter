@@ -21,3 +21,7 @@
 ## 1.1.0
 
 - Update image URLs in README.md for proper rendering
+
+# 1.1.1
+
+- Fixed a bug where the country flag was not being shown in the selection dialog.
